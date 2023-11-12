@@ -79,6 +79,9 @@ int setup_microsleep_hard(void) {
     } else if (pi_version == 4) {
         // Set BCM base addresses:
         bcm_peri_base_phys_addr = BCM2711_PERI_BASE_PHYS_ADDR;
+    } else  if (pi_version == 5){
+        // Set BCM base addresses:
+        bcm_peri_base_phys_addr = BCM2712_PERI_BASE_PHYS_ADDR;
     } else {
         return -ENOPIVER;
     }
